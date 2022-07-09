@@ -32,3 +32,63 @@ body{
   background-position: 0px 30px, 30px 0px, 113px 29px, 147px 50px, 23px 60px;
   position: relative;
 }
+
+.raining-cloud::after {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 65px;
+  width: 2px;
+  height: 6px;
+  color: var(--cloud-bg);
+  box-sizing: border-box;
+  animation: raining-cloud 0.5s linear infinite;
+}
+
+@keyframes raining-cloud {
+  0% {
+    box-shadow:
+      25px 0 var(--cloud-bg),
+      50px 0 var(--cloud-bg),
+      75px 0 var(--cloud-bg),
+      100px 0 var(--cloud-bg),
+      125px 0 var(--cloud-bg),
+      150px 0 var(--cloud-bg),
+      25px 0 var(--cloud-bg),
+      50px 0 var(--cloud-bg),
+      75px 0 var(--cloud-bg),
+      100px 0 var(--cloud-bg),
+      125px 0 var(--cloud-bg),
+      150px 0 var(--cloud-bg);
+  }
+  50% {
+    box-shadow:
+      25px 20px var(--cloud-bg),
+      50px 60px rgba(255, 255, 255, 0),
+      75px 30px rgba(255, 255, 255, 0),
+      100px 70px rgba(255, 255, 255, 0),
+      125px 40px var(--cloud-bg),
+      150px 60px rgba(255, 255, 255, 0),
+      25px 20px var(--cloud-bg),
+      50px 30px var(--cloud-bg),
+      75px 10px var(--cloud-bg),
+      100px 30px var(--cloud-bg),
+      125px 30px rgba(255, 255, 255, 0),
+      150px 30px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow:
+      25px 60px rgba(255, 255, 255, 0),
+      50px 60px rgba(255, 255, 255, 0),
+      75px 50px rgba(255, 255, 255, 0),
+      100px 70px rgba(255, 255, 255, 0),
+      125px 70px rgba(255, 255, 255, 0),
+      150px 60px rgba(255, 255, 255, 0),
+      25px 80px rgba(255, 255, 255, 0),
+      50px 80px rgba(255, 255, 255, 0),
+      75px 70px rgba(255, 255, 255, 0),
+      100px 60px rgba(255, 255, 255, 0),
+      125px 30px rgba(255, 255, 255, 0),
+      150px 30px rgba(255, 255, 255, 0);
+  }
+}
